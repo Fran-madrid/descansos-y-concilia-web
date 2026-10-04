@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Icono de «Descansos y Concilia»: luna creciente (descansos, noches) y avión con su estela.
+       Capas: #fondo (degradado azul noche) y #figura (todo lo demás). scripts/iconos.mjs las usa por separado
+       para el icono adaptable de Android. -->
+  <defs>
+    <linearGradient id="degradado" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c3150"/>
+      <stop offset="1" stop-color="#0b1726"/>
+    </linearGradient>
+    <linearGradient id="oro" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd27a"/>
+      <stop offset="1" stop-color="#f2a21b"/>
+    </linearGradient>
+    <mask id="creciente">
+      <rect width="1024" height="1024" fill="#fff"/>
+      <circle cx="610" cy="430" r="250" fill="#000"/>
+    </mask>
+  </defs>
+  <rect id="fondo" width="1024" height="1024" fill="url(#degradado)"/>
+  <g id="figura">
+    <!-- Estrellas -->
+    <g fill="#eef3f9">
+      <circle cx="300" cy="250" r="9" opacity=".9"/>
+      <circle cx="770" cy="760" r="8" opacity=".7"/>
+      <circle cx="235" cy="430" r="6" opacity=".6"/>
+      <circle cx="700" cy="250" r="6" opacity=".6"/>
+    </g>
+    <!-- Luna creciente -->
+    <circle cx="480" cy="540" r="290" fill="url(#oro)" mask="url(#creciente)"/>
+    <!-- Estela -->
+    <path d="M430 690 C 520 640, 590 580, 640 500" fill="none" stroke="#eef3f9" stroke-width="16" stroke-linecap="round" stroke-dasharray="2 40" opacity=".85"/>
+    <!-- Avión (dibujado hacia arriba en una caja de 100×100 y girado 45°) -->
+    <g transform="translate(700 420) rotate(45) scale(2.6) translate(-50 -50)">
+      <path fill="#ffffff" d="M50 4 C54 4 56.5 9 56.5 16 L56.5 37 L93 58 L93 66.5 L56.5 56 L56.5 79 L67 87 L67 94 L50 90 L33 94 L33 87 L43.5 79 L43.5 56 L7 66.5 L7 58 L43.5 37 L43.5 16 C43.5 9 46 4 50 4 Z"/>
+    </g>
+  </g>
+</svg>
